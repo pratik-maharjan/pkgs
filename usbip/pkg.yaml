@@ -1,0 +1,19 @@
+name: usbip
+variant: scratch
+shell: /bin/bash
+dependencies:
+  - stage: base
+  - stage: kernel
+steps:
+  - install:
+      - |
+        KVER=$(ls /usr/lib/modules/)
+        mkdir -p /rootfs/usr/lib/modules/${KVER}/kernel/drivers/usb/usbip/
+        cp /usr/lib/modules/${KVER}/kernel/drivers/usb/usbip/usbip-core.ko \
+           /rootfs/usr/lib/modules/${KVER}/kernel/drivers/usb/usbip/
+        cp /usr/lib/modules/${KVER}/kernel/drivers/usb/usbip/vhci-hcd.ko \
+           /rootfs/usr/lib/modules/${KVER}/kernel/drivers/usb/usbip/
+        depmod -b /rootfs/usr ${KVER}
+finalize:
+  - from: /rootfs
+    to: /
