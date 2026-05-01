@@ -1,6 +1,6 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED, PLEASE DO NOT EDIT.
 #
-# Generated on 2026-04-18T14:43:19Z by kres 4b58472.
+# Generated on 2026-05-01T03:48:02Z by kres 1762ab2.
 
 # common variables
 
@@ -116,6 +116,7 @@ TARGETS += nvidia-open-gpu-kernel-modules-lts-pkg
 TARGETS += nvidia-open-gpu-kernel-modules-production-pkg
 TARGETS += px-fuse-pkg
 TARGETS += tenstorrent-pkg
+TARGETS += usbip
 TARGETS += xdma-driver-pkg
 TARGETS += zfs-pkg
 NONFREE_TARGETS = nonfree-kmod-nvidia-lts-pkg

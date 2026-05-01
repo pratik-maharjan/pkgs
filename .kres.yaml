@@ -73,6 +73,7 @@ spec:
     - nvidia-open-gpu-kernel-modules-production-pkg
     - px-fuse-pkg
     - tenstorrent-pkg
+    - usbip
     - xdma-driver-pkg
     - zfs-pkg
   additionalTargets:
